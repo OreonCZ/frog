@@ -17,8 +17,10 @@ int main(void)
     const int pixelWidth = 190;
     const int pixelHeight = 102;
 
-    InitWindow(screenWidth, screenHeight, "raylib [models] example - models loading");
+    InitWindow(screenWidth, screenHeight, "frog");
     InitAudioDevice();
+
+    SetWindowState(FLAG_WINDOW_ALWAYS_RUN);
 
     Music music = LoadMusicStream("resources/music/crazyFrog.mp3");
     PlayMusicStream(music);
@@ -41,7 +43,7 @@ int main(void)
 
     RenderTexture2D renderTexture = LoadRenderTexture(pixelWidth, pixelHeight);
 
-    SetTargetFPS(60);
+    SetTargetFPS(120);
 
     while (!WindowShouldClose())
     {
