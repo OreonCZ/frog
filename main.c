@@ -1,7 +1,6 @@
 #include "raylib.h"
 #include "raymath.h"
 
-
 float rotationSign = 1.0f;
 
 void changeDirection(){
@@ -38,8 +37,7 @@ int main(void)
     model.materials[0].maps[MATERIAL_MAP_DIFFUSE].texture = texture;
 
     Vector3 position = { 0.0f, 0.0f, -2.0f };
-
-    BoundingBox bounds = GetMeshBoundingBox(model.meshes[0]);
+    //BoundingBox bounds = GetMeshBoundingBox(model.meshes[0]);
 
     RenderTexture2D renderTexture = LoadRenderTexture(pixelWidth, pixelHeight);
 
@@ -48,6 +46,7 @@ int main(void)
     while (!WindowShouldClose())
     {
         UpdateMusicStream(music);
+        
         BeginTextureMode(renderTexture);
         ClearBackground(WHITE);
         BeginMode3D(camera);
